@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const slogans = document.querySelectorAll('.slogan');
   let currentIndex = 0;
@@ -37,10 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(showNextSlogan, 5000);
 });
 
-let crochet_icon = document.querySelector('#crochet-icon');
-
 window.addEventListener('scroll', () => {
   let value = window.scrollY;
-  crochet_icon.style.transform = `rotate(${value + 30}deg)`;
+  const crochetIcons = document.querySelectorAll('#crochet-icon');
+
+  crochetIcons.forEach(icon => {
+    icon.style.transform = `rotate(${value}deg)`;
+  });
+  
   document.querySelector('body').style.overflowX = 'hidden';
 });
