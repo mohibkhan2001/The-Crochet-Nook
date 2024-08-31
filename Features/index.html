@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Crochet Nook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 class="name">The Crochet Nook</h1>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nesciunt.</span>
+      <div class="image">
+        <img src="image-1.png" alt="Left Image" id="img1" />
+        <img src="image-1.png" alt="Right Image" id="img2" />
+      </div>
+    </header>
+  </div>
+
+  <section>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis, adipisci incidunt suscipit repudiandae veritatis eaque reiciendis aspernatur voluptates repellat, cupiditate ipsum molestias natus. Possimus aliquam nemo laboriosam consequatur obcaecati similique rerum ullam dolore sequi porro unde recusandae libero commodi at perferendis ea et, assumenda maxime ab nulla nisi hic eveniet? Culpa recusandae nam quam commodi animi sit in quibusdam provident, quisquam impedit explicabo, maiores earum! Esse consequuntur porro assumenda. Quasi, fugit deserunt nesciunt quae minus blanditiis dolores laboriosam, omnis quam ab autem corporis animi adipisci voluptates dolor corrupti. Excepturi rerum molestiae aspernatur a, nemo accusamus deserunt libero recusandae nihil!
+  </section>
+
+  <script>
+    let leftImage = document.querySelector('#img1');
+    let rightImage = document.querySelector('#img2');
+    let title = document.querySelector('.name');
+
+    window.addEventListener('scroll', () => {
+      let value = window.scrollY;
+      title.style.letterSpacing = `${value * 0.02}px`;
+      title.style.marginTop = `${value * 1.0}px`;
+      // rightImage.style.top = `${value * -1}px`;
+      // leftImage.style.left = `${value * -0.5}px`;
+    });
+  </script>
+</body>
+</html>
